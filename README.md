@@ -1,7 +1,5 @@
 # VisiAge Fall Detection System
 
----
-
 This project is a Fall Detection System that utilizes computer vision techniques to detect falls in a video feed. The system integrates with Azure Blob Storage to store relevant information about the detected falls.
 
 ## Features
