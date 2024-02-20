@@ -5,8 +5,8 @@ This project is a Fall Detection System that utilizes computer vision techniques
 ## Features
 
 - **Real-time Fall Detection:** Utilizes the YOLO (You Only Look Once) model to analyze video frames and identify key points of a person, enabling real-time fall detection. The possible key points are as shown in the image below:
-- 
-  <img src="images/keypoints.png" alt="YOLOv8 Keypoints" width="200"/>
+  
+  <img src="images/keypoints.png" alt="YOLOv8 Keypoints" width="50%"/>
   
 - **Azure Blob Storage Integration:** Stores information about detected falls, including timestamp, video blob name, and incident status, in Azure Blob Storage.
 - **API Call to App Service:** Triggers an API call to an app service endpoint when a fall is detected, providing relevant information for further alerting and analysis.
