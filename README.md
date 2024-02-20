@@ -1,4 +1,7 @@
 # VisiAge Fall Detection System
+### By Caring Minds
+
+<img src="images/caringminds.jpg" alt="Caring Minds Logo" width="50%"/>
 
 This project is a Fall Detection System that utilizes computer vision techniques to detect falls in a video feed. The system integrates with Azure Blob Storage to store relevant information about the detected falls.
 
@@ -47,7 +50,7 @@ This project is a Fall Detection System that utilizes computer vision techniques
 
 ## License
 
-YOLOv8 which is used in this system is the latest version of YOLO by Ultralytics. According to the Ultralytics Licensing page, YOLOv8 repositories like YOLOv3, YOLOv5, or YOLOv8 come with an AGPL-3.0 License for all users by default. If you aim to integrate Ultralytics software and AI models into commercial goods and services without adhering to the open-source requirements of AGPL-3.0, then their Enterprise License is what you’re looking for. See the page for more details about [Ultralytics legal terms of use](https://www.ultralytics.com/legal/terms-of-use).
+YOLOv8 which is used in this system is the latest version of YOLO by Ultralytics. According to the Ultralytics Licensing page, YOLOv8 repositories, just like YOLOv3 and YOLOv5, comes with an AGPL-3.0 License for all users by default. If you aim to integrate Ultralytics software and AI models into commercial goods and services without adhering to the open-source requirements of AGPL-3.0, then their Enterprise License is what you’re looking for. See the page for more details about [Ultralytics legal terms of use](https://www.ultralytics.com/legal/terms-of-use).
 
 ## Acknowledgments
 
