@@ -31,6 +31,11 @@ This project is a Fall Detection System that utilizes computer vision techniques
 - **Thresholds and Parameters:**
   - Adjust falling thresholds, time thresholds, and other parameters as needed for your specific use case. These are defined in the code under the "DEFINING VARIABLES AND CONSTANTS FOR FALLING/LAYING DOWN" section.
 
+- **Frames Per Second (FPS):**
+  - The current FPS is 10. This is what worked best with the webcam. The number of frames in the before and after clip is calculated as follows: number of seconds x FPS
+  - So since the saved footage is a maximum of 10 seconds before, it is 100 frames. And 15 seconds after (150 frames). This value is subject to change as you change the FPS.
+  - The code uses `source=0` which is the webcam. To apply the model to a video or image, you change the source to the path of the file. Be aware though, you would have to change the FPS and the before/after lengths to match your desired speed. It was tested with a 30 FPS video and worked when the value of FPS was changed to 30, before to 300, and after to 450.
+
 ## Important Notes
 
 - This project uses the FastAPI framework for handling HTTP requests. Ensure that FastAPI is suitable for your deployment environment.
