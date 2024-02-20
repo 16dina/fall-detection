@@ -4,7 +4,8 @@ This project is a Fall Detection System that utilizes computer vision techniques
 
 ## Features
 
-- **Real-time Fall Detection:** Utilizes the YOLO (You Only Look Once) model to analyze video frames and identify key points of a person, enabling real-time fall detection.
+- **Real-time Fall Detection:** Utilizes the YOLO (You Only Look Once) model to analyze video frames and identify key points of a person, enabling real-time fall detection. The possible key points are as shown in the image below:
+  ![Alt text](images/keypoints.png "YOLOv8 Keypoints")
 - **Azure Blob Storage Integration:** Stores information about detected falls, including timestamp, video blob name, and incident status, in Azure Blob Storage.
 - **API Call to App Service:** Triggers an API call to an app service endpoint when a fall is detected, providing relevant information for further alerting and analysis.
 
@@ -29,16 +30,16 @@ This project is a Fall Detection System that utilizes computer vision techniques
   - You can replace the model file or adjust its location as needed.
 
 - **Thresholds and Parameters:**
-  - Adjust falling thresholds, time thresholds, and other parameters as needed for your specific use case. These are defined in the code under the "DEFINING VARIABLES AND CONSTANTS FOR FALLING/LAYING DOWN" section.
+  - Adjust falling thresholds, time thresholds, and other parameters as needed for your specific use case. These are defined in the code under the "DEFINING VARIABLES AND CONSTANTS FOR FALLING/LAYING DOWN" section. Only adjust the following variables:
+    - `MIN_ELAPSED_TIME_THRESHOLD`
+    - `VIDEO_FPS`
 
 - **Frames Per Second (FPS):**
   - The current FPS is 10. This is what worked best with the webcam. The number of frames in the before and after clip is calculated as follows: number of seconds x FPS
-  - So since the saved footage is a maximum of 10 seconds before, it is 100 frames. And 15 seconds after (150 frames). This value is subject to change as you change the FPS.
-  - The code uses `source=0` which is the webcam. To apply the model to a video or image, you change the source to the path of the file. Be aware though, you would have to change the FPS and the before/after lengths to match your desired speed. It was tested with a 30 FPS video and worked when the value of FPS was changed to 30, before to 300, and after to 450.
+  - Since the saved footage is a maximum of 10 seconds before the fall, it is 100 frames. And 15 seconds after (150 frames). This value is subject to change as you change the FPS.
+  - The code uses `source=0` which is the webcam. To apply the model to a video or image, you can change the source to the path of the file in quotes. Be aware though, you would have to change the FPS and the before/after lengths to match your desired speed for the capturing of the video footage. It was tested with a 30 FPS video and worked when the value of `video_frames_before` was 300, and `video_frames_after` was 450.
 
 ## Important Notes
-
-- This project uses the FastAPI framework for handling HTTP requests. Ensure that FastAPI is suitable for your deployment environment.
 
 - Make sure to customize the API endpoint (`url` variable in the `send_api_call` function) to match the endpoint of your app service.
 
